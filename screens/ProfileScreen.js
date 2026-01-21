@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { View, Text } from "react-native"; 
 import { useContext } from "react"; 
 import { AuthContext } from "../context/AuthContext"; 
@@ -20,7 +20,7 @@ export default function ProfileScreen() {
    </SafeAreaView> 
  ); 
 } 
-=======
+
 import { useContext } from "react";
 import { View, Text, Button } from "react-native";
 import { AuthContext } from "../context/AuthContext";
@@ -35,4 +35,4 @@ return (
 </View>
 );
 }
->>>>>>> 522f8a3fc7a0c8815f402f342ddd1e33079bd221
+

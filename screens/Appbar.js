@@ -1,26 +1,26 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity } from "react-native";
+import AppBar from "../components/AppBar";
 
-export default function AppBar() {
+export default function NativeFeaturesScreen({ navigation }) {
   return (
-    <View style={styles.appBar}>
-      <Text style={styles.title}> Mon Application</Text>
+    <View style={{ flex: 1 }}>
+      <AppBar title="Fonctionnalités natives" navigation={navigation} canGoBack={true} />
+
+      <TouchableOpacity onPress={() => navigation.navigate("Caméra")}>
+        <Text>📷 Caméra</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate("Localisation")}>
+        <Text>📍 Géolocalisation</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate("Contacts")}>
+        <Text>👥 Contacts</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.navigate("Notifications")}>
+        <Text>🔔 Notifications</Text>
+      </TouchableOpacity>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  appBar: {
-    height: 60,
-    backgroundColor: '#007AFF', // couleur de fond
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 4, // ombre sur Android
-  },
-  title: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-});
-

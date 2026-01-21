@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {
   View,
   Text,
@@ -143,7 +143,7 @@ export default function LoginScreen() {
     </View>
   );
 }
-=======
+
 import { useState, useContext } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { AuthContext } from "../context/AuthContext";
@@ -179,4 +179,4 @@ padding: 10,
 borderRadius: 6,
 },
 });
->>>>>>> 522f8a3fc7a0c8815f402f342ddd1e33079bd221
+
