@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { View, Text } from "react-native"; 
 import { useContext } from "react"; 
 import { AuthContext } from "../context/AuthContext"; 
@@ -19,3 +20,19 @@ export default function ProfileScreen() {
    </SafeAreaView> 
  ); 
 } 
+=======
+import { useContext } from "react";
+import { View, Text, Button } from "react-native";
+import { AuthContext } from "../context/AuthContext";
+
+export default function ProfileScreen() {
+const { user, logout } = useContext(AuthContext);
+return (
+<View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+<Text style={{ fontSize: 24 }}>Utilisateur : {user.username}</Text>
+
+<Button title="Se déconnecter" onPress={logout} />
+</View>
+);
+}
+>>>>>>> 522f8a3fc7a0c8815f402f342ddd1e33079bd221
